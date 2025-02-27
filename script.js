@@ -43,12 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
      // Dynamic project loading (example)
      const projects = [
           {
-               image: 'robot2.webp',
+               image: 'Images/robot2.webp',
                title: 'Drone Projesi',
                description: 'Hassas kontrol sistemli drone'
           },
           {
-               image: 'robot3.webp',
+               image: 'Images/robot3.webp',
                title: 'Robot Kol',
                description: '6 eksenli endüstriyel robot kol'
           }
