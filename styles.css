@@ -615,9 +615,24 @@ footer {
 @media screen and (max-width: 1024px) {
     .navbar {
         padding: 1rem 1.5rem;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        position: static;
+        left: auto;
+    }
+
+    .theme-toggle {
+        position: static;
+        right: auto;
+        margin-left: 0.5rem;
+        order: 2;
     }
     
     .menu-btn {
+        position: static;
+        right: auto;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -635,15 +650,6 @@ footer {
         color: var(--text-primary);
     }
 
-    .theme-toggle {
-        order: 2;
-        margin-left: 0.5rem;
-    }
-
-    .logo {
-        order: 0;
-    }
-
     .nav-links {
         position: fixed;
         top: 70px;
@@ -657,6 +663,7 @@ footer {
         transition: 0.3s ease;
         opacity: 0;
         visibility: hidden;
+        justify-content: flex-start;
     }
 
     .nav-links.active {
