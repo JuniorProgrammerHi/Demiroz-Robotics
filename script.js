@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
                document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                });
+               // Close mobile menu when a link is clicked
+               navLinks.classList.remove('active');
           });
      });
 
@@ -15,6 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
      menuBtn.addEventListener('click', () => {
           navLinks.classList.toggle('active');
+     });
+
+     // Close menu when clicking outside
+     document.addEventListener('click', (e) => {
+          if (!navLinks.contains(e.target) && !menuBtn.contains(e.target) && navLinks.classList.contains('active')) {
+               navLinks.classList.remove('active');
+          }
      });
 
      // Intersection Observer for fade-in animations
@@ -33,11 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
      // Dynamic project loading (example)
      const projects = [
-          {
-               image: 'robot1.webp',
-               title: 'Otonom Robot',
-               description: 'Yapay zeka destekli navigasyon sistemi'
-          },
           {
                image: 'robot2.webp',
                title: 'Drone Projesi',
